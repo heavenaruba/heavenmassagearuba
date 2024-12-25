@@ -145,11 +145,6 @@ section .mbr-background-video-preview {
   text-align: right;
 }
 
-@media (max-width: 767px) {
-  .align-left, .align-right {
-    text-align: center;
-  }
-}
 /*! Font-weight  */
 .mbr-light {
   font-weight: 300;
@@ -926,6 +921,36 @@ blockquote {
 
 .app-video-wrapper > img {
   opacity: 1;
+}
+
+.item {
+  position: relative;
+}
+
+.dropdown-menu .dropdown-menu {
+  left: 100%;
+}
+
+.dropdown-item + .dropdown-menu {
+  display: none;
+}
+
+.dropdown-item:hover + .dropdown-menu,
+.dropdown-menu:hover {
+  display: block;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .mbr-video-foreground {
+    height: 300% !important;
+    top: -100% !important;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .mbr-video-foreground {
+    width: 300% !important;
+    left: -100% !important;
+  }
 }.engine {
 	position: absolute;
 	text-indent: -2400px;
